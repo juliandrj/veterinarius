@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
 
 AUTHENTICATION_BACKENDS = (
     'django_auth_ldap.backend.LDAPBackend',
-    #'django.contrib.auth.backends.ModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
 )
 #LDAP
 AUTH_LDAP_SERVER_URI = 'ldap://ldap.veterinarius.com'
@@ -89,6 +89,7 @@ INSTALLED_APPS = [
     'rest_auth',
     'corsheaders',
     'api',
+    'modelos',
 ]
 
 MIDDLEWARE = [
