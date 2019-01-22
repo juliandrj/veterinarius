@@ -28,5 +28,5 @@ class MenuViewSet(viewsets.ModelViewSet):
         id_grupos = []
         for g in self.request.user.groups.all():
             id_grupos.append(g.pk)
-        queryset = OpcionMenu.objects.filter(pk__in=id_grupos)
+        queryset = OpcionMenu.objects.filter(grupo_id__in=id_grupos).order_by('opcion_padre','pk')
         return queryset
