@@ -8,6 +8,13 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'menu', views.MenuViewSet)
+router.register(r'genero', views.GeneroViewSet)
+router.register(r'especie', views.EspecieViewSet)
+router.register(r'raza', views.RazaViewSet)
+router.register(r'medico', views.MedicoViewSet)
+router.register(r'propietario', views.PropietarioViewSet)
+router.register(r'mascota', views.MascotaViewSet)
+router.register(r'agenda', views.AgendaViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

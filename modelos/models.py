@@ -63,8 +63,8 @@ class Agenda(models.Model):
     medico = models.ForeignKey(Medico, on_delete=models.PROTECT)
     mascota = models.ForeignKey(Mascota, on_delete=models.PROTECT)
     fecha = models.DateTimeField(null=False)
-    def __str__(self):
-        return self.fecha + ' - ' + self.medicov + ': ' + self.mascota
+    # def __str__(self):
+    #     return self.fecha + ' - ' + self.medicov + ': ' + self.mascota
     class Meta:
         ordering = ('fecha',)
 
