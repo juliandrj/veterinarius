@@ -70,3 +70,7 @@ class AgendaViewSet(viewsets.ModelViewSet):
         if medicoId is not None:
             queryset = Agenda.objects.filter(medico_id=medicoId).order_by('fecha')
         return queryset
+
+class AgendaEViewSet(viewsets.ModelViewSet):
+    queryset = Agenda.objects.all()
+    serializer_class = AgendaESerializer

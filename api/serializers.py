@@ -62,3 +62,11 @@ class AgendaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Agenda
         fields = ('id', 'mascota', 'fecha')
+
+class AgendaESerializer(serializers.ModelSerializer):
+    medico = serializers.SlugRelatedField(many=False, slug_field='id', queryset=Medico.objects.all())
+    mascota = serializers.SlugRelatedField(many=False, slug_field='id', queryset=Mascota.objects.all())
+    fecha = serializers.DateTimeField()
+    class Meta:
+        model = Agenda
+        fields = ('id', 'medico', 'mascota', 'fecha')

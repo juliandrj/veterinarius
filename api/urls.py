@@ -15,6 +15,7 @@ router.register(r'medico', views.MedicoViewSet)
 router.register(r'propietario', views.PropietarioViewSet)
 router.register(r'mascota', views.MascotaViewSet)
 router.register(r'agenda', views.AgendaViewSet)
+router.register(r'agendae', views.AgendaEViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
